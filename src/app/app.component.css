@@ -1,0 +1,26 @@
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+    height: 70px;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+  }
+
+h1{
+    font-size: 32px;    
+    margin: 0px 0px 0px 0px !important;
+}
+
+table {
+    table-layout: auto;
+}
+
+.grid-columns-header{
+	font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    background-color: silver;
+}
+.table tr td:nth-child(2) { width:100% }

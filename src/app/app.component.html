@@ -1,0 +1,56 @@
+<div class="header">
+  <h1><img src="../assets/spotlight.svg" class="icon-32" style="margin-right:5px;"/>Spotlight</h1>
+  <div style="display: flex; align-items: center;justify-content: center;">
+    <span style="font-weight: bold; margin-right: 5px;">BETA</span> 
+    <span><img src="../assets/menu-icon.svg"  class="icon-30"/></span>
+  </div>  
+</div>
+<div style="display: flex; align-items: center;justify-content: center;height: 100px;font-size: 32px;">
+  <span>Manage <span style="font-weight: bold;">Campaigns</span></span>
+</div>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <table>
+        <thead class="grid-header" >
+            <tr >
+                <th *ngFor = "let header of campaignHeader" 
+                  style="background-color: darkblue;color: white">
+                  {{header.name | uppercase}}
+                </th>
+            </tr>
+        </thead>
+        <tbody style="background-color: silver; text-align: center;">
+            <tr *ngFor = "let data of campaignData" >
+                <td style="padding: 5px; width: 150px;cursor: pointer;" (click) = "showModal(data['Scheduled Date'])">
+                  <div style="font-size: 12px; text-align: left;">{{data['Scheduled Date'] | date:'yyyy-MM-dd' }}</div>
+                  <!-- <div style="font-size: 12px; text-align: left;">{{getNumberOfDays(data['Scheduled Date'])}}</div> -->
+                </td> 
+                <td style="display: flex; flex-direction: row; height: 50px; width: 200px;
+                  border-style: solid;border-color: silver; cursor: pointer;"
+                  (click) = "showModal(data['name'])">
+                  <img src="../assets/{{data['image']}}.svg" class="icon-30" style="margin:5px;"/>
+                  <div style="display: flex;flex-direction: column; margin:5px; align-items: center;justify-content: center">
+                    <div style="font-size: 16px;text-align: left;">{{data['name']}}</div>
+                    <div style="font-size: 12px;text-align: left;">{{data['country']}}</div>
+                  </div>
+                </td>   
+                <td>
+                  <div style="display:flex; flex-direction: column;width: 100px;border-style: solid;justify-content: center;
+                  border-color: silver;"></div>             
+                    <img src="../assets/pricing.svg" class="icon-30"/>
+                    <div style="font-size: 10px;">View</div>
+                    <div style="font-size: 10px;">Pricing</div>
+                  
+                </td>                 
+                <td style="display: flex; justify-content: center; align-items: center; width: 250px;border-style: solid;border-color: silver;">
+                        <img src="../assets/csv.svg" class="icon-32"/>
+                        <img src="../assets/report.svg" class="icon-32"/>
+                        <input type="date" id="scheduler" name="schedule-again" />
+                </td>            
+            </tr>             
+        </tbody>  
+    </table>
+  </div>
+  <div class="col-2"></div>  
+</div>

@@ -1,0 +1,49 @@
+{
+    "campaignheaders" : [
+      {"name":"DATE"},
+      {"name":"CAMPAIGN"},
+      {"name":"VIEW"},
+      {"name":"ACTIONS"}
+      ],
+    "campaigns" : [ {
+        "id": 1,
+        "name" : "Whatsapp",
+        "image" : "whatsapp",
+        "country" : "US",
+        "price" : "$1500",
+        "Scheduled Date": "2017-06-01"
+      }, 
+      {
+        "id": 2,
+        "name" : "Facebook",
+        "image" : "facebook",
+        "country" : "US",
+        "price" : "$1800",
+        "Scheduled Date": "2018-09-01"
+      },
+      {
+        "id": 3,
+        "name" : "Instagram",
+        "image" : "instagram",
+        "country" : "UK",
+        "price" : "$2000",
+        "Scheduled Date": "2018-12-01"
+      },
+      {
+        "id": 4,
+        "name" : "Twitter",
+        "image" : "twitter",
+        "country" : "UK",
+        "price" : "$1600",
+        "Scheduled Date": "2018-10-24"
+      },
+      {
+        "id": 5,
+        "name" : "LinkedIn",
+        "image" : "linkedin",
+        "country" : "CANADA",
+        "price" : "$1200",
+        "Scheduled Date": "2017-08-01"
+      }
+    ]
+  }
